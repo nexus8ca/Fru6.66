@@ -1,11 +1,13 @@
+#include <locale.h>
 #include "InicioForm.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
-using namespace Fru666; 
+using namespace Fru666;
 
 [STAThreadAttribute]
 int main(array<String^>^ args) {
+    setlocale(LC_ALL, "");   
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
 

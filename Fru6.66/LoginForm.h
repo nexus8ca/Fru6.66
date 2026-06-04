@@ -294,6 +294,7 @@ namespace Fru666 {
 	private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
 		// Obtener valores de los textbox
 		String^ usuario = this->textBox1->Text;
 		String^ contrasena = this->textBox2->Text;
@@ -303,30 +304,37 @@ namespace Fru666 {
 		bool autenticado = false;
 
 		// Validar credenciales
-		if (usuario == "Gerente" && contrasena == "1234") {
+		if (usuario == "Luis" && contrasena == "1234") {
 			autenticado = true;
-			usuarioValido = "Gerente";
+			usuarioValido = "Luis";
 		}
-		else if (usuario == "Paciente" && contrasena == "1234") {
+		else if (usuario == "Carlos" && contrasena == "1234") {
 			autenticado = true;
-			usuarioValido = "Paciente";
+			usuarioValido = "Carlos";
 		}
-		else if (usuario == "Personal" && contrasena == "1234") {
+		else if (usuario == "Elizabeth" && contrasena == "1234") {
 			autenticado = true;
-			usuarioValido = "Personal";
+			usuarioValido = "Elizabeth";
+		}
+		else {
+			// Mostrar mensaje de error
+			MessageBox::Show(L"Usuario o contraseña incorrectos",
+				L"Error de Autenticación",
+				MessageBoxButtons::OK,
+				MessageBoxIcon::Error);
 		}
 
 		// Si está autenticado, abrir la forma correspondiente
 		if (autenticado) {
-			if (usuarioValido == "Gerente") {
+			if (usuarioValido == "Luis") {
 				MenuGerenteForm^ formGerente = gcnew MenuGerenteForm();
 				formGerente->Show();
 			}
-			else if (usuarioValido == "Paciente") {
+			else if (usuarioValido == "Carlos") {
 				MenuPacienteForm^ formPaciente = gcnew MenuPacienteForm();
 				formPaciente->Show();
 			}
-			else if (usuarioValido == "Personal") {
+			else if (usuarioValido == "Elizabeth") {
 				MenuPersonalForm^ formPersonal = gcnew MenuPersonalForm();
 				formPersonal->Show();
 			}

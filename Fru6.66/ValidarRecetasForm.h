@@ -10,12 +10,12 @@ namespace Fru666 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for HistorialForm
+	/// Summary for ValidarRecetasForm
 	/// </summary>
-	public ref class HistorialForm : public System::Windows::Forms::Form
+	public ref class ValidarRecetasForm : public System::Windows::Forms::Form
 	{
 	public:
-		HistorialForm(void)
+		ValidarRecetasForm(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace Fru666 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~HistorialForm()
+		~ValidarRecetasForm()
 		{
 			if (components)
 			{
@@ -35,12 +35,12 @@ namespace Fru666 {
 			}
 		}
 	private: System::Windows::Forms::Label^ label1;
+	protected:
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-	protected:
 
 	private:
 		/// <summary>
@@ -69,15 +69,15 @@ namespace Fru666 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18.33962F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(394, 112);
+			this->label1->Location = System::Drawing::Point(416, 124);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(285, 32);
+			this->label1->Size = System::Drawing::Size(221, 32);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Historial de Compras";
+			this->label1->Text = L"Validar Recetas";
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(67, 551);
+			this->button1->Location = System::Drawing::Point(76, 536);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 1;
@@ -86,55 +86,49 @@ namespace Fru666 {
 			// 
 			// dataGridView1
 			// 
-			this->dataGridView1->AllowUserToAddRows = false;
-			this->dataGridView1->AllowUserToDeleteRows = false;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->Column1,
 					this->Column2, this->Column3
 			});
-			this->dataGridView1->Location = System::Drawing::Point(337, 240);
+			this->dataGridView1->Location = System::Drawing::Point(340, 224);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidth = 45;
-			this->dataGridView1->Size = System::Drawing::Size(375, 123);
+			this->dataGridView1->Size = System::Drawing::Size(376, 177);
 			this->dataGridView1->TabIndex = 2;
 			// 
 			// Column1
 			// 
-			this->Column1->HeaderText = L"Fecha";
+			this->Column1->HeaderText = L"Medicamento";
 			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
-			this->Column1->ReadOnly = true;
 			this->Column1->Width = 110;
 			// 
 			// Column2
 			// 
-			this->Column2->HeaderText = L"Medicamento";
+			this->Column2->HeaderText = L"Cantidad";
 			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
-			this->Column2->ReadOnly = true;
 			this->Column2->Width = 110;
 			// 
 			// Column3
 			// 
-			this->Column3->HeaderText = L"Estado";
+			this->Column3->HeaderText = L"Última Actualización";
 			this->Column3->MinimumWidth = 6;
 			this->Column3->Name = L"Column3";
-			this->Column3->ReadOnly = true;
 			this->Column3->Width = 110;
 			// 
-			// HistorialForm
+			// ValidarRecetasForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Window;
-			this->ClientSize = System::Drawing::Size(1089, 629);
+			this->ClientSize = System::Drawing::Size(1091, 627);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
-			this->Name = L"HistorialForm";
-			this->Text = L"HistorialForm";
+			this->Name = L"ValidarRecetasForm";
+			this->Text = L"ValidarRecetasForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

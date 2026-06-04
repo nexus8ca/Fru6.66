@@ -132,7 +132,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ControlForm.cpp" />
+    <ClCompile Include="EstadisticasForm.cpp" />
     <ClCompile Include="GestionForm.cpp" />
+    <ClCompile Include="GestionPForm.cpp" />
     <ClCompile Include="HistorialForm.cpp" />
     <ClCompile Include="InicioForm.cpp" />
     <ClCompile Include="LoginForm.cpp" />
@@ -142,9 +145,20 @@
     <ClCompile Include="MenuPersonalForm.cpp" />
     <ClCompile Include="PedidosForm.cpp" />
     <ClCompile Include="Program.cpp" />
+    <ClCompile Include="ReportesForm.cpp" />
+    <ClCompile Include="ValidarRecetasForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ControlForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="EstadisticasForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="GestionForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="GestionPForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="HistorialForm.h">
@@ -171,10 +185,28 @@
     <ClInclude Include="PedidosForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ReportesForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ValidarRecetasForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ControlForm.resx">
+      <DependentUpon>ControlForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticasForm.resx">
+      <DependentUpon>EstadisticasForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionForm.resx">
       <DependentUpon>GestionForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPForm.resx">
+      <DependentUpon>GestionPForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialForm.resx">
+      <DependentUpon>HistorialForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioForm.resx">
       <DependentUpon>InicioForm.h</DependentUpon>
@@ -185,11 +217,23 @@
     <EmbeddedResource Include="MedicamentosForm.resx">
       <DependentUpon>MedicamentosForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuGerenteForm.resx">
+      <DependentUpon>MenuGerenteForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPacienteForm.resx">
       <DependentUpon>MenuPacienteForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuPersonalForm.resx">
+      <DependentUpon>MenuPersonalForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PedidosForm.resx">
       <DependentUpon>PedidosForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesForm.resx">
+      <DependentUpon>ReportesForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidarRecetasForm.resx">
+      <DependentUpon>ValidarRecetasForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -73,7 +73,7 @@ namespace Fru666 {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(403, 36);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Farmacia de Registro Único";
+			this->label1->Text = L"Farmacia de Registro Unico";
 			// 
 			// label2
 			// 

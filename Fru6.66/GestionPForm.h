@@ -10,12 +10,12 @@ namespace Fru666 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for HistorialForm
+	/// Summary for GestionPForm
 	/// </summary>
-	public ref class HistorialForm : public System::Windows::Forms::Form
+	public ref class GestionPForm : public System::Windows::Forms::Form
 	{
 	public:
-		HistorialForm(void)
+		GestionPForm(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace Fru666 {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~HistorialForm()
+		~GestionPForm()
 		{
 			if (components)
 			{
@@ -35,11 +35,14 @@ namespace Fru666 {
 			}
 		}
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button4;
 	protected:
 
 	private:
@@ -56,11 +59,14 @@ namespace Fru666 {
 		void InitializeComponent(void)
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -69,40 +75,30 @@ namespace Fru666 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18.33962F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(394, 112);
+			this->label1->Location = System::Drawing::Point(414, 157);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(285, 32);
+			this->label1->Size = System::Drawing::Size(280, 32);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Historial de Compras";
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(67, 551);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Volver";
-			this->button1->UseVisualStyleBackColor = true;
+			this->label1->Text = L"Gestión del Personal";
 			// 
 			// dataGridView1
 			// 
-			this->dataGridView1->AllowUserToAddRows = false;
 			this->dataGridView1->AllowUserToDeleteRows = false;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->Column1,
 					this->Column2, this->Column3
 			});
-			this->dataGridView1->Location = System::Drawing::Point(337, 240);
+			this->dataGridView1->Location = System::Drawing::Point(355, 232);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidth = 45;
-			this->dataGridView1->Size = System::Drawing::Size(375, 123);
-			this->dataGridView1->TabIndex = 2;
+			this->dataGridView1->Size = System::Drawing::Size(376, 163);
+			this->dataGridView1->TabIndex = 1;
 			// 
 			// Column1
 			// 
-			this->Column1->HeaderText = L"Fecha";
+			this->Column1->HeaderText = L"Nombre";
 			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
 			this->Column1->ReadOnly = true;
@@ -110,7 +106,7 @@ namespace Fru666 {
 			// 
 			// Column2
 			// 
-			this->Column2->HeaderText = L"Medicamento";
+			this->Column2->HeaderText = L"Rol";
 			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
 			this->Column2->ReadOnly = true;
@@ -124,17 +120,56 @@ namespace Fru666 {
 			this->Column3->ReadOnly = true;
 			this->Column3->Width = 110;
 			// 
-			// HistorialForm
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(79, 583);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 2;
+			this->button1->Text = L"Volver";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(572, 565);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"Agregar";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(688, 565);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(75, 23);
+			this->button3->TabIndex = 4;
+			this->button3->Text = L"Editar";
+			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(803, 565);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(75, 23);
+			this->button4->TabIndex = 5;
+			this->button4->Text = L"Bloquear";
+			this->button4->UseVisualStyleBackColor = true;
+			// 
+			// GestionPForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Window;
-			this->ClientSize = System::Drawing::Size(1089, 629);
-			this->Controls->Add(this->dataGridView1);
+			this->ClientSize = System::Drawing::Size(1138, 663);
+			this->Controls->Add(this->button4);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->label1);
-			this->Name = L"HistorialForm";
-			this->Text = L"HistorialForm";
+			this->Name = L"GestionPForm";
+			this->Text = L"GestionPForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
